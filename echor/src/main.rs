@@ -1,7 +1,8 @@
 use clap::Parser;
 
-#[derive(Parser)]
+#[derive(Debug, Parser)]
 #[command(version, about)]
+/// Rust version of `echo`
 struct Args {
     #[arg(short = 'n', help = "omit printing new line")]
     new_line: bool,
