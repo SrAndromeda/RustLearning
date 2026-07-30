@@ -59,7 +59,7 @@ fn read_from_reader(
     for line in reader.lines() {
         let this_line = line?;
         if number_lines || (number_nonblank && !this_line.is_empty()) {
-            println!("{number:>6}\t{text}", number = nline, text = this_line);
+            println!("{:>6}\t{}", nline, this_line);
             nline = nline + 1;
         } else {
             println!("{}", this_line);
